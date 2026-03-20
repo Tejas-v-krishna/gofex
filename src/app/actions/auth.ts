@@ -19,7 +19,16 @@ export async function signOut() {
   redirect('/login')
 }
 
-export async function getUser() {
+export type User = {
+  id: string;
+  email?: string;
+  fullName?: string;
+  avatarUrl?: string;
+};
+
+export async function getUser(): Promise<User | null> {
   // TODO: Implement get user with your preferred auth provider
+  // This is a placeholder that always returns null for now.
+  // In a real app, you would fetch this from your auth session.
   return null
 }
